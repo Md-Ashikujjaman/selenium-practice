@@ -29,8 +29,7 @@ selenium-practice/
 ├── src/
 │   └── test/
 │       └── java/
-│           └── org/
-│               └── example/
+│           └── org/example/
 │                   ├── FirstTest.java
 │                   └── DriverSetup.java
 └── README.md                   # This file
