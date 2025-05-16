@@ -3,7 +3,7 @@ package org.example;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
-import java.sql.Driver;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,15 +50,19 @@ public class InteractingWithWebBrowserTest extends DriverSetup{
         driver.get("https://www.instagram.com/");
         Thread.sleep(3000);
 
+
+
         String tabHandel = driver.getWindowHandle();
-        System.out.println("Insta: " + tabHandel);
+        System.out.println("Instagram: " + tabHandel);
+
 
         List<String> handelsId = new ArrayList<>(driver.getWindowHandles());
 
         for (String handle: handelsId ){
-
             System.out.println(handle);
         }
+
+        driver.close();
 
         driver.switchTo().window(handelsId.get(0));
         Thread.sleep(3000);
