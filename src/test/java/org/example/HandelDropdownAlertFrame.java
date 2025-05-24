@@ -16,6 +16,18 @@ public class HandelDropdownAlertFrame extends DriverSetup{
         dropdownMenu.click();
 
         select.selectByIndex(2);
+        Thread.sleep(3000);
+        WebElement selected_option = select.getFirstSelectedOption();
+        System.out.println(selected_option.getText());
+
+        select.selectByVisibleText("Option 1");
+        Thread.sleep(3000);
+//        WebElement selected_option = select.getFirstSelectedOption();
+        System.out.println(selected_option.getText());
+
+        select.selectByValue("2");
+//        WebElement selected_option = select.getFirstSelectedOption();
+        System.out.println(selected_option.getText());
 
         Thread.sleep(3000);
     }
