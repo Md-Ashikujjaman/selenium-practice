@@ -118,7 +118,7 @@ Process finished with exit code 0
 
 ## 👥 Contributors
 
-> Currently maintained by **[Your Name or GitHub Handle]**  
+> Currently maintained by **[Md. Ashikujjaman]**  
 > Contributions are welcome — feel free to fork and create a pull request!
 
 ---
