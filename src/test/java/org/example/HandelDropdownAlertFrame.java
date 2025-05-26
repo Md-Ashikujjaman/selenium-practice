@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class HandelDropdownAlertFrame extends DriverSetup{
 
     @Test
@@ -30,5 +32,11 @@ public class HandelDropdownAlertFrame extends DriverSetup{
         System.out.println(selected_option.getText());
 
         Thread.sleep(3000);
+
+        List<WebElement> all_options = select.getOptions();
+        System.out.println(all_options.size());
+        for (WebElement option: all_options){
+            System.out.println(option.getText());
+        }
     }
 }
