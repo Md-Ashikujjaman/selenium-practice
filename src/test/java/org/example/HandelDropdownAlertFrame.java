@@ -33,10 +33,20 @@ public class HandelDropdownAlertFrame extends DriverSetup{
 
         Thread.sleep(3000);
 
+
+
+
         List<WebElement> all_options = select.getOptions();
         System.out.println(all_options.size());
         for (WebElement option: all_options){
             System.out.println(option.getText());
         }
+//        select.deselectAll();
+//        select.deselectByIndex(2);
+
+        /*Web Alert Handling*/
+
+        driver.get("https://www.tutorialspoint.com/selenium/practice/alerts.php");
+        
     }
 }
