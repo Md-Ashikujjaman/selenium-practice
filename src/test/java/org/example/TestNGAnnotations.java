@@ -1,6 +1,12 @@
 package org.example;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
+
+import java.sql.SQLOutput;
 
 public class TestNGAnnotations {
 
@@ -47,5 +53,31 @@ public class TestNGAnnotations {
     @BeforeSuite
     public void beforeSuite(){
         System.out.println("This will execute first");
+    }
+
+
+    @Test
+    public void TestAssertion(){
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com");
+        driver.getTitle();
+
+        Assert.assertEquals(driver.getTitle(), "Google");
+        System.out.println("Test done 1");
+        Assert.assertTrue(true);
+        Assert.assertFalse(false);
+        System.out.println("Test done 2");
+
+        SoftAssert softAssert= new SoftAssert();
+        System.out.println("Send keys");
+        softAssert.assertEquals(1,1);
+        System.out.println("Click on element");
+        softAssert.assertFalse(false);
+        System.out.println("visible");
+        softAssert.assertTrue(true);
+        softAssert.assertAll();
+
+
     }
 }
